@@ -1,0 +1,585 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local BoxingClub = Instance.new("ScreenGui")
+local Main = Instance.new("ImageLabel")
+local Rainbow = Instance.new("Frame")
+local SpeedButton = Instance.new("TextLabel")
+local Button = Instance.new("TextButton")
+local SpeedAmt = Instance.new("TextBox")
+local Speed = Instance.new("TextLabel")
+local Squats = Instance.new("TextButton")
+local Sits = Instance.new("TextButton")
+local Pushup = Instance.new("TextButton")
+local Dirt = Instance.new("TextButton")
+local Fred = Instance.new("TextButton")
+local Antonio = Instance.new("TextButton")
+local Name = Instance.new("TextLabel")
+
+--Properties:
+
+BoxingClub.Name = "BoxingClub"
+BoxingClub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+BoxingClub.ResetOnSpawn = false
+
+Main.Name = "Main"
+Main.Parent = BoxingClub
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.Position = UDim2.new(0.220036596, 0, 0.117647059, 0)
+Main.Size = UDim2.new(0, 528, 0, 467)
+Main.Image = "rbxassetid://3570695787"
+Main.ImageColor3 = Color3.fromRGB(35, 35, 35)
+Main.ScaleType = Enum.ScaleType.Slice
+Main.SliceCenter = Rect.new(100, 100, 100, 100)
+Main.SliceScale = 0.120
+
+Rainbow.Name = "Rainbow"
+Rainbow.Parent = Main
+Rainbow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rainbow.Position = UDim2.new(0, 0, 0.138345987, 0)
+Rainbow.Size = UDim2.new(0, 528, 0, 4)
+
+SpeedButton.Name = "SpeedButton"
+SpeedButton.Parent = Main
+SpeedButton.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+SpeedButton.BorderSizePixel = 0
+SpeedButton.Position = UDim2.new(0.357068092, 0, 0.230520785, 0)
+SpeedButton.Size = UDim2.new(0, 50, 0, 25)
+SpeedButton.Font = Enum.Font.SourceSans
+SpeedButton.Text = " "
+SpeedButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpeedButton.TextSize = 14.000
+
+Button.Name = "Button"
+Button.Parent = SpeedButton
+Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button.BorderSizePixel = 0
+Button.Size = UDim2.new(0, 25, 0, 25)
+Button.Font = Enum.Font.SourceSans
+Button.Text = " "
+Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button.TextSize = 14.000
+
+SpeedAmt.Name = "SpeedAmt"
+SpeedAmt.Parent = SpeedButton
+SpeedAmt.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+SpeedAmt.Position = UDim2.new(1.87910628, 0, -0.221829906, 0)
+SpeedAmt.Size = UDim2.new(0, 104, 0, 36)
+SpeedAmt.Font = Enum.Font.SourceSans
+SpeedAmt.Text = "60"
+SpeedAmt.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpeedAmt.TextScaled = true
+SpeedAmt.TextSize = 1.000
+SpeedAmt.TextWrapped = true
+
+Speed.Name = "Speed"
+Speed.Parent = SpeedButton
+Speed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Speed.BackgroundTransparency = 1.000
+Speed.Position = UDim2.new(-3.0115571, 0, -0.00719575584, 0)
+Speed.Size = UDim2.new(0, 117, 0, 25)
+Speed.Font = Enum.Font.SourceSans
+Speed.Text = "Speed"
+Speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+Speed.TextScaled = true
+Speed.TextSize = 14.000
+Speed.TextWrapped = true
+
+Squats.Name = "Squats"
+Squats.Parent = Main
+Squats.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Squats.Position = UDim2.new(0.0670013577, 0, 0.372391343, 0)
+Squats.Size = UDim2.new(0, 117, 0, 25)
+Squats.Font = Enum.Font.SourceSans
+Squats.Text = "Squats"
+Squats.TextColor3 = Color3.fromRGB(255, 255, 255)
+Squats.TextScaled = true
+Squats.TextSize = 14.000
+Squats.TextWrapped = true
+
+Sits.Name = "Sits"
+Sits.Parent = Main
+Sits.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Sits.Position = UDim2.new(0.0670013577, 0, 0.475564629, 0)
+Sits.Size = UDim2.new(0, 117, 0, 25)
+Sits.Font = Enum.Font.SourceSans
+Sits.Text = "Situps"
+Sits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sits.TextScaled = true
+Sits.TextSize = 14.000
+Sits.TextWrapped = true
+
+Pushup.Name = "Pushup"
+Pushup.Parent = Main
+Pushup.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Pushup.Position = UDim2.new(0.0670013577, 0, 0.577219009, 0)
+Pushup.Size = UDim2.new(0, 117, 0, 25)
+Pushup.Font = Enum.Font.SourceSans
+Pushup.Text = "Pushups"
+Pushup.TextColor3 = Color3.fromRGB(255, 255, 255)
+Pushup.TextScaled = true
+Pushup.TextSize = 14.000
+Pushup.TextWrapped = true
+
+Dirt.Name = "Dirt"
+Dirt.Parent = Main
+Dirt.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Dirt.Position = UDim2.new(0.0670013577, 0, 0.669462442, 0)
+Dirt.Size = UDim2.new(0, 117, 0, 25)
+Dirt.Font = Enum.Font.SourceSans
+Dirt.Text = "Farm Dirt"
+Dirt.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dirt.TextScaled = true
+Dirt.TextSize = 14.000
+Dirt.TextWrapped = true
+
+Fred.Name = "Fred"
+Fred.Parent = Main
+Fred.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Fred.Position = UDim2.new(0.0670013577, 0, 0.764595211, 0)
+Fred.Size = UDim2.new(0, 117, 0, 25)
+Fred.Font = Enum.Font.SourceSans
+Fred.Text = "Farm Fred"
+Fred.TextColor3 = Color3.fromRGB(255, 255, 255)
+Fred.TextScaled = true
+Fred.TextSize = 14.000
+Fred.TextWrapped = true
+
+Antonio.Name = "Antonio"
+Antonio.Parent = Main
+Antonio.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Antonio.Position = UDim2.new(0.0707892329, 0, 0.871661603, 0)
+Antonio.Size = UDim2.new(0, 117, 0, 25)
+Antonio.Font = Enum.Font.SourceSans
+Antonio.Text = "Farm Antonio"
+Antonio.TextColor3 = Color3.fromRGB(255, 255, 255)
+Antonio.TextScaled = true
+Antonio.TextSize = 14.000
+Antonio.TextWrapped = true
+
+Name.Name = "Name"
+Name.Parent = Main
+Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name.BackgroundTransparency = 1.000
+Name.Position = UDim2.new(0.265151501, 0, 0.0128479656, 0)
+Name.Size = UDim2.new(0, 200, 0, 50)
+Name.Font = Enum.Font.SourceSans
+Name.Text = "Boxing Club"
+Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name.TextScaled = true
+Name.TextSize = 14.000
+Name.TextWrapped = true
+
+-- Scripts:
+
+local function UFILJB_fake_script() -- Rainbow.LocalScript 
+	local script = Instance.new('LocalScript', Rainbow)
+
+	            local frame = script.Parent
+	            local RunService = game:GetService("RunService")
+	            
+	            while RunService.RenderStepped:Wait() do
+	                for hue = 0,1, 0.01 do
+	                    frame.BackgroundColor3 = Color3.fromHSV(hue,1,1)
+	                            wait(0.1)
+	        end
+	    end
+	
+end
+coroutine.wrap(UFILJB_fake_script)()
+local function UEEYQO_fake_script() -- Button.LocalScript 
+	local script = Instance.new('LocalScript', Button)
+
+	local tog = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if tog == false then
+			tog = true
+			script.Parent:TweenPosition(UDim2.new(0, 25,0, 0),"Out","Linear",0.1,false,nil)
+			local numb = tonumber(script.Parent.Parent.SpeedAmt.Text)
+			        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = numb
+		else
+			if tog == true then
+			tog = false
+			script.Parent:TweenPosition(UDim2.new(0, 0,0, 0),"Out","Linear",0.1,false,nil)
+		        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+			end
+		end
+	end)
+end
+coroutine.wrap(UEEYQO_fake_script)()
+local function VWRONMR_fake_script() -- Main.Drag 
+	local script = Instance.new('LocalScript', Main)
+
+	script.Parent.Draggable  = true
+	script.Parent.Active = true
+	script.Parent.Selectable = true
+end
+coroutine.wrap(VWRONMR_fake_script)()
+local function NFROUF_fake_script() -- Squats.LocalScript 
+	local script = Instance.new('LocalScript', Squats)
+
+	local tog = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if tog == false then
+			tog = true
+	_G.tool = "Squat" -- Sit, Push, Squat
+	 
+	local plr = game.Players.LocalPlayer
+	local bag = plr.Backpack
+	local chr = plr.Character
+	 
+	function activate()
+	    for i1, v1 in pairs(chr:GetChildren()) do
+	        if v1.Name:match(_G.tool) then
+	            v1:Activate()
+	        end
+	    end
+	end
+	function parent()
+	    for i2, v2 in pairs(bag:GetChildren()) do
+	        if v2.Name:match(_G.tool) then
+	            v2.Parent = chr
+	        end
+	    end
+	end
+	function buy()
+	    for i, v in pairs(workspace.Shop:GetChildren()) do
+	        if v.Name:match(_G.tool) then
+	            fireclickdetector(v:FindFirstChild 'ClickDetector', 0)
+	            fireclickdetector(v:FindFirstChild 'ClickDetector', 1)
+	        end
+	    end
+	end
+	 
+	function sup()
+	for i2, v2 in pairs(bag:GetChildren()) do
+	    if v2.Name:match(_G.tool) then
+	        _G.bagtool = true
+	    else
+	        _G.bagtool = false
+	    end
+	end
+	for i1, v1 in pairs(chr:GetChildren()) do
+	    if v1.Name:match(_G.tool) then
+	        _G.chrtool = true
+	    else
+	        _G.chrtool = false
+	    end
+	end
+	end
+	 
+	 
+	game:service'RunService'.RenderStepped:connect(function()
+	    sup()
+	end)
+	 
+	while wait() do
+	    if _G.bagtool == false and _G.chrtool == false then
+	        buy()
+	    elseif _G.bagtool == true then
+	        parent()
+	    elseif _G.chrtool == true then
+	        activate()
+	    end
+	end
+	 
+		 end
+		end)
+end
+coroutine.wrap(NFROUF_fake_script)()
+local function WXXAJHY_fake_script() -- Sits.LocalScript 
+	local script = Instance.new('LocalScript', Sits)
+
+	local tog = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if tog == false then
+			tog = true
+	_G.tool = "Sit" -- Sit, Push, Squat
+	 
+	local plr = game.Players.LocalPlayer
+	local bag = plr.Backpack
+	local chr = plr.Character
+	 
+	function activate()
+	    for i1, v1 in pairs(chr:GetChildren()) do
+	        if v1.Name:match(_G.tool) then
+	            v1:Activate()
+	        end
+	    end
+	end
+	function parent()
+	    for i2, v2 in pairs(bag:GetChildren()) do
+	        if v2.Name:match(_G.tool) then
+	            v2.Parent = chr
+	        end
+	    end
+	end
+	function buy()
+	    for i, v in pairs(workspace.Shop:GetChildren()) do
+	        if v.Name:match(_G.tool) then
+	            fireclickdetector(v:FindFirstChild 'ClickDetector', 0)
+	            fireclickdetector(v:FindFirstChild 'ClickDetector', 1)
+	        end
+	    end
+	end
+	 
+	function sup()
+	for i2, v2 in pairs(bag:GetChildren()) do
+	    if v2.Name:match(_G.tool) then
+	        _G.bagtool = true
+	    else
+	        _G.bagtool = false
+	    end
+	end
+	for i1, v1 in pairs(chr:GetChildren()) do
+	    if v1.Name:match(_G.tool) then
+	        _G.chrtool = true
+	    else
+	        _G.chrtool = false
+	    end
+	end
+	end
+	 
+	 
+	game:service'RunService'.RenderStepped:connect(function()
+	    sup()
+	end)
+	 
+	while wait() do
+	    if _G.bagtool == false and _G.chrtool == false then
+	        buy()
+	    elseif _G.bagtool == true then
+	        parent()
+	    elseif _G.chrtool == true then
+	        activate()
+	    end
+	end
+	 
+		 end
+		end)
+end
+coroutine.wrap(WXXAJHY_fake_script)()
+local function QVBPN_fake_script() -- Pushup.LocalScript 
+	local script = Instance.new('LocalScript', Pushup)
+
+	local tog = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if tog == false then
+			tog = true
+	_G.tool = "Push" -- Sit, Push, Squat
+	 
+	local plr = game.Players.LocalPlayer
+	local bag = plr.Backpack
+	local chr = plr.Character
+	 
+	function activate()
+	    for i1, v1 in pairs(chr:GetChildren()) do
+	        if v1.Name:match(_G.tool) then
+	            v1:Activate()
+	        end
+	    end
+	end
+	function parent()
+	    for i2, v2 in pairs(bag:GetChildren()) do
+	        if v2.Name:match(_G.tool) then
+	            v2.Parent = chr
+	        end
+	    end
+	end
+	function buy()
+	    for i, v in pairs(workspace.Shop:GetChildren()) do
+	        if v.Name:match(_G.tool) then
+	            fireclickdetector(v:FindFirstChild 'ClickDetector', 0)
+	            fireclickdetector(v:FindFirstChild 'ClickDetector', 1)
+	        end
+	    end
+	end
+	 
+	function sup()
+	for i2, v2 in pairs(bag:GetChildren()) do
+	    if v2.Name:match(_G.tool) then
+	        _G.bagtool = true
+	    else
+	        _G.bagtool = false
+	    end
+	end
+	for i1, v1 in pairs(chr:GetChildren()) do
+	    if v1.Name:match(_G.tool) then
+	        _G.chrtool = true
+	    else
+	        _G.chrtool = false
+	    end
+	end
+	end
+	 
+	 
+	game:service'RunService'.RenderStepped:connect(function()
+	    sup()
+	end)
+	 
+	while wait() do
+	    if _G.bagtool == false and _G.chrtool == false then
+	        buy()
+	    elseif _G.bagtool == true then
+	        parent()
+	    elseif _G.chrtool == true then
+	        activate()
+	    end
+	end
+	 
+		 end
+		end)
+end
+coroutine.wrap(QVBPN_fake_script)()
+local function GDRHT_fake_script() -- Dirt.LocalScript 
+	local script = Instance.new('LocalScript', Dirt)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	for i,v in pairs(game.Workspace.Matches:GetDescendants()) do
+	if v:IsA("Seat") and v.Name:match("Player") then
+	local oldpos = v.Position
+	v.Position = Vector3.new(10000000,10000000,1000000)
+	end
+	end
+	
+	while wait(40) do
+	for i,v in pairs(game.Workspace.Dirt:GetDescendants()) do
+	if v:IsA("ClickDetector") and v.Parent.Name == "Dirt" then
+	local egg = v.Parent.Position
+	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+	
+	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(egg)})
+	tween:Play()
+	wait(5)
+	fireclickdetector(v)
+	wait(14)
+	fireclickdetector(game:GetService("Workspace").NPCS.Trash.ClickDetector)
+	end
+	end
+	end
+	end)
+	end
+coroutine.wrap(GDRHT_fake_script)()
+local function IATFHZ_fake_script() -- Fred.Box 
+	local script = Instance.new('LocalScript', Fred)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	wait(3)
+	fireclickdetector(game:GetService("Workspace").NPCS["Gym Teleport"].ClickDetector)
+	wait(1)
+	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+	 
+	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(game:GetService("Workspace").NPCS.Quests.Fred.HumanoidRootPart.Position)})
+	tween:Play()
+	wait(3)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.5)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.5)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	wait(60)
+	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+	 
+	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(game:GetService("Workspace").QuestInfo.DeliverSpawn.Position)})
+	tween:Play()
+	while wait(3600) do
+	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+	 
+	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(game:GetService("Workspace").NPCS.Quests.Fred.HumanoidRootPart.Position)})
+	tween:Play()
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Fred.ClickDetector)
+	wait(0.4)
+	wait(60)
+	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+	 
+	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(game:GetService("Workspace").QuestInfo.DeliverSpawn.Position)})
+	tween:Play()
+	end
+	end)
+end
+coroutine.wrap(IATFHZ_fake_script)()
+local function ZSCJXS_fake_script() -- Antonio.Pizza 
+	local script = Instance.new('LocalScript', Antonio)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	wait(1)
+	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+	 
+	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(game:GetService("Workspace").NPCS.Quests.Antonio.HumanoidRootPart.Position)})
+	tween:Play()
+	wait(5)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Antonio.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Antonio.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Antonio.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Antonio.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Antonio.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Antonio.ClickDetector)
+	wait(0.4)
+	wait(60)
+	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+	 
+	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(game:GetService("Workspace").QuestInfo.PizzaDeliverSpawn.Position)})
+	tween:Play()
+	wait(1)
+	while wait(3620) do
+	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+	 
+	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(game:GetService("Workspace").NPCS.Quests.Antonio.HumanoidRootPart.Position)})
+	tween:Play()
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Antonio.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Antonio.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Antonio.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Antonio.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Antonio.ClickDetector)
+	wait(0.4)
+	fireclickdetector(game:GetService("Workspace").NPCS.Quests.Antonio.ClickDetector)
+	wait(0.4)
+	wait(60)
+	tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
+	 
+	tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(game:GetService("Workspace").QuestInfo.PizzaDeliverSpawn.Position)})
+	tween:Play()
+	end
+	end)
+	
+end
+coroutine.wrap(ZSCJXS_fake_script)()
